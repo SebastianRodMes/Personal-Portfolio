@@ -71,7 +71,9 @@
     /*  MailChimp Slider
     /*----------------------------------------------------*/
     function mailChimp(){
-        $('#mc_embed_signup').find('form').ajaxChimp();
+        if($.fn.ajaxChimp){
+            $('#mc_embed_signup').find('form').ajaxChimp();
+        }
     }
     mailChimp();
 	
@@ -80,25 +82,31 @@
 	/*----------------------------------------------------*/
     /*  Simple LightBox js
     /*----------------------------------------------------*/
-    $('.imageGallery1 .light').simpleLightbox();
+    if($.fn.simpleLightbox){
+        $('.imageGallery1 .light').simpleLightbox();
+    }
 	
-	$('.counter').counterUp({
-		delay: 10,
-		time: 1000
-	});
+    if($.fn.counterUp){
+	    $('.counter').counterUp({
+		    delay: 10,
+		    time: 1000
+	    });
+    }
 	
-	$(".skill_main").each(function() {
-        $(this).waypoint(function() {
-            var progressBar = $(".progress-bar");
-            progressBar.each(function(indx){
-                $(this).css("width", $(this).attr("aria-valuenow") + "%")
-            })
-        }, {
-            triggerOnce: true,
-            offset: 'bottom-in-view'
+    if($.fn.waypoint){
+	    $(".skill_main").each(function() {
+            $(this).waypoint(function() {
+                var progressBar = $(".progress-bar");
+                progressBar.each(function(indx){
+                    $(this).css("width", $(this).attr("aria-valuenow") + "%")
+                })
+            }, {
+                triggerOnce: true,
+                offset: 'bottom-in-view'
 
+            });
         });
-    });
+    }
 	
 	
 	/*----------------------------------------------------*/
@@ -106,30 +114,29 @@
     /*----------------------------------------------------*/
 	function projects_isotope(){
         if ( $('.projects_area').length ){
+            var $grid = $(".projects_inner");
+
             // Activate isotope in container
-			$(".projects_inner").imagesLoaded( function() {
-                $(".projects_inner").isotope({
+            $grid.imagesLoaded( function() {
+                $grid.isotope({
+                    itemSelector: '.col-lg-6',
                     layoutMode: 'fitRows',
                     animationOptions: {
                         duration: 750,
                         easing: 'linear'
                     }
-                }); 
+                });
             });
-			
+
             // Add isotope click function
-            $(".filter li").on('click',function(){
+            $(".filter li").on('click',function(e){
+                e.preventDefault();
                 $(".filter li").removeClass("active");
                 $(this).addClass("active");
 
                 var selector = $(this).attr("data-filter");
-                $(".projects_inner").isotope({
-                    filter: selector,
-                    animationOptions: {
-                        duration: 450,
-                        easing: "linear",
-                        queue: false,
-                    }
+                $grid.isotope({
+                    filter: selector
                 });
                 return false;
             });
@@ -166,35 +173,7 @@
     testimonials_slider();
 	
 	
-	/*----------------------------------------------------*/
-    /*  Testimonials Slider
-    /*----------------------------------------------------*/
-//    function testimonials_slider(){
-//        if ( $('.testi_slider').length ){
-//            $('.testi_slider').owlCarousel({
-//                loop:true,
-//                margin: 30,
-//                items: 2,
-//                nav: true,
-//                autoplay: false,
-//                smartSpeed: 1500,
-//                dots:true, 
-//				navContainer: '.testimonials_area',
-//                navText: ['<i class="lnr lnr-arrow-up"></i>','<i class="lnr lnr-arrow-down"></i>'],
-//                responsiveClass: true,
-//                responsive: {
-//                    0: {
-//                        items: 1,
-//                    },
-//                    768: {
-//                        items: 2,
-//                    },
-//                }
-//            })
-//        }
-//    }
-//    testimonials_slider();
-	
+
 	
 	/*----------------------------------------------------*/
     /*  Google map js

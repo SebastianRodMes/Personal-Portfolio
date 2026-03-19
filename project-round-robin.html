@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link rel="icon" href="img/favicon.png" type="image/png">
-        <title>Projects — Sebastián Rodríguez</title>
+        <title>Round Robin Tournament Visualization — Sebastián Rodríguez</title>
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="vendors/linericon/style.css">
         <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -15,15 +15,16 @@
         <link rel="stylesheet" href="vendors/flaticon/flaticon.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/storytelling_project1.css">
     </head>
     <body>
 
         <!--================Header Menu Area =================-->
         <header class="header_area">
-            <div class="main_menu" id="mainNav"><link rel="stylesheet" href="css/responsive.css">
+            <div class="main_menu" id="mainNav">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <div class="container box_1620">
-                    Sebastián Rodríguez Mesén
+                        Sebastián Rodríguez Mesén
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
@@ -53,10 +54,11 @@
                 <div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
                 <div class="container">
                     <div class="banner_content text-center">
-                        <h2 data-i18n="nav_projects">Projects</h2>
+                        <h2 data-i18n="rr_banner_title">Project Details</h2>
                         <div class="page_link">
                             <a href="index.html" data-i18n="nav_home">Home</a>
                             <a href="projects.html" data-i18n="nav_projects">Projects</a>
+                            <a href="project-round-robin.html" data-i18n="proj2_da_title">Round Robin Visualization</a>
                         </div>
                     </div>
                 </div>
@@ -64,77 +66,120 @@
         </section>
         <!--================End Banner Area =================-->
 
-        <!--================Projects Area =================-->
-        <section class="projects_area p_120">
+        <!--================Project Detail Area =================-->
+        <section class="portfolio_details_area p_120">
             <div class="container">
-                <div class="main_title gsap-fade-up">
-                    
-                    <p data-i18n="projects_desc">Data analysis, automation, and web development projects I have built to solve real problems.</p>
-                </div>
-                <div class="projects_fillter">
-                    <ul class="filter list">
-                        <li class="active" data-filter="*"><a href="javascript:void(0)" data-i18n="filter_all">All</a></li>
-                        <li data-filter=".auto"><a href="javascript:void(0)" data-i18n="filter_auto">Automation</a></li>
-                        <li data-filter=".data"><a href="javascript:void(0)" data-i18n="filter_data">Data Analysis</a></li>
-                        <li data-filter=".web"><a href="javascript:void(0)" data-i18n="filter_web">Web Dev</a></li>
-                    </ul>
-                </div>
-                <div class="projects_inner row">
 
-                    <!-- Project 1: Systematic Dashboard -->
-                    <div class="col-lg-6 col-sm-6 data">
-                        <div class="projects_item">
-                            <a href="project-sistematica.html">
-                                <img src="img/projects/project1/1.png" alt="Systematic Dashboard">
-                            </a>
-                            <div class="projects_text">
-                                <a href="project-sistematica.html"><h4 data-i18n="proj1_title">Systematic Dashboard</h4></a>
-                                <p data-i18n="proj1_cat">Data Analysis · Automation</p>
-                            </div>
+                <a href="projects.html" class="back-link gsap-fade-up">
+                    <i class="fa fa-arrow-left"></i>
+                    <span data-i18n="sist_back">Back to Projects</span>
+                </a>
+
+                <!-- Project Header -->
+                <div class="project-header gsap-fade-up">
+                    <h2 data-i18n="proj2_da_title">Round Robin Tournament Visualization</h2>
+                    <div class="project-meta">
+                        <span><i class="fa fa-trophy"></i> Tournament Analytics</span>
+                        <span><i class="fa fa-tag"></i> <span data-i18n="proj2_da_cat">Data Analysis · Automation</span></span>
+                    </div>
+                    <p class="project-summary" data-i18n="rr_summary">
+                        Developed under a tight timeframe, this project involved visualizing the daily results of a round-robin style tournament. Using Excel, Power Query, and Power BI, a dynamic dashboard was created. Crucially, the process incorporated a fully automated pipeline utilizing Power BI service alerts and Google Apps Script to route result images accurately to over 400 participants distributed across different countries.
+                    </p>
+                </div>
+
+                <!-- Tools Used -->
+                <div class="text-center gsap-fade-up" style="margin-bottom: 60px;">
+                    <span class="tool-badge">Power BI</span>
+                    <span class="tool-badge">Power Query</span>
+                    <span class="tool-badge">Excel</span>
+                    <span class="tool-badge">Google Apps Script</span>
+                    <span class="tool-badge">Automation</span>
+                </div>
+
+                <!-- Storytelling Timeline -->
+                <div class="story-timeline">
+
+                    <!-- Step 1: Requirements -->
+                    <div class="story-step step-left gsap-fade-up">
+                        <div class="story-content">
+                            <span class="step-number">1</span>
+                            <h4 data-i18n="rr_step1_title">Rapid Requirements & Design</h4>
+                            <p data-i18n="rr_step1_desc">
+                                With a very short margin of time, the project kicked off by rapidly gathering requirements. The goal was to build a clear, engaging visual representation of a round-robin tournament, tracking daily matchups and overall standings.
+                            </p>
+                        </div>
+                        <div class="story-dot"></div>
+                        <div class="story-img">
+                            <img src="img/projects/project2/5.png" alt="Tournament requirements and planning">
                         </div>
                     </div>
 
-                    <!-- Project 2: Round Robin Visualization -->
-                    <div class="col-lg-6 col-sm-6 data">
-                        <div class="projects_item">
-                            <a href="project-round-robin.html">
-                                <img src="img/projects/project2/5.png" alt="Round Robin Dashboard">
-                            </a>
-                            <div class="projects_text">
-                                <a href="project-round-robin.html"><h4 data-i18n="proj2_da_title">Round Robin Visualization</h4></a>
-                                <p data-i18n="proj2_da_cat">Data Analysis · Automation</p>
-                            </div>
+                    <!-- Step 2: Data Handling -->
+                    <div class="story-step step-right gsap-fade-up">
+                        <div class="story-content">
+                            <span class="step-number">2</span>
+                            <h4 data-i18n="rr_step2_title">Excel & Power Query Integration</h4>
+                            <p data-i18n="rr_step2_desc">
+                                Tournament data was centralized using Excel. Power Query was then utilized to extract, clean, and transform the daily matchup statistics, ensuring the dataset was structured perfectly for analytical visualization.
+                            </p>
+                        </div>
+                        <div class="story-dot"></div>
+                        <div class="story-img">
+                            <img src="img/projects/project2/6.png" alt="Data integration and querying process">
                         </div>
                     </div>
 
-                    <!-- Project 3: Texas Trailers -->
-                    <div class="col-lg-6 col-sm-6 web">
-                        <div class="projects_item">
-                            <div class="placeholder_img">
-                                <iframe src="https://texastrailerscrweb.web.app/" style="width: 100%; height: 100%; border: none; pointer-events: none;" aria-hidden="true" tabindex="-1"></iframe>
-                            </div>
-                            <div class="projects_text">
-                                <a href="project-texas-trailers.html"><h4 data-i18n="proj3_title">Texas Trailers <span class="badge badge-warning ml-1" style="font-size: 12px; vertical-align: middle;">In Development</span></h4></a>
-                                <p data-i18n="proj3_cat">Web Development</p>
-                            </div>
+                    <!-- Step 3: Visualization -->
+                    <div class="story-step step-left gsap-fade-up">
+                        <div class="story-content">
+                            <span class="step-number">3</span>
+                            <h4 data-i18n="rr_step3_title">Power BI Dashboard</h4>
+                            <p data-i18n="rr_step3_desc">
+                                The polished data was imported into Power BI, where an interactive and dynamic dashboard was developed to display the round-robin results. It allowed users to track team progress, daily metrics, and performance over the course of the tournament.
+                            </p>
+                        </div>
+                        <div class="story-dot"></div>
+                        <div class="story-img">
+                            <img src="img/projects/project2/7.png" alt="Interactive Power BI tournament dashboard">
                         </div>
                     </div>
 
-                    <!-- Placeholder slot 3 — add your next project here -->
-                    <!-- <div class="col-lg-6 col-sm-6 [category] gsap-fade-up">
-                        <div class="projects_item">
-                            <div class="placeholder_img"><span>Image coming soon</span></div>
-                            <div class="projects_text">
-                                <a href="#"><h4>Project Title</h4></a>
-                                <p>Category</p>
-                            </div>
+                    <!-- Step 4: Web Automation -->
+                    <div class="story-step step-right gsap-fade-up">
+                        <div class="story-content">
+                            <span class="step-number">4</span>
+                            <h4 data-i18n="rr_step4_title">Power BI Service Automation</h4>
+                            <p data-i18n="rr_step4_desc">
+                                To distribute the daily outcomes without manual effort, a subscription and forwarding automation was set up in the Power BI web service. This generated an email containing a snapshot image of the daily results.
+                            </p>
                         </div>
-                    </div> -->
+                        <div class="story-dot"></div>
+                        <div class="story-img">
+                            <img src="img/projects/project2/8.png" alt="Power BI web service automated email setup">
+                        </div>
+                    </div>
+
+                    <!-- Step 5: Routing Automation -->
+                    <div class="story-step step-left gsap-fade-up">
+                        <div class="story-content">
+                            <span class="step-number">5</span>
+                            <h4 data-i18n="rr_step5_title">Apps Script Distribution via Country</h4>
+                            <p data-i18n="rr_step5_desc">
+                                When the automated email arrived from Power BI, a custom Google Apps Script intercepted it. The script analyzed the email and autonomously routed the daily result images to over 400 participants, properly filtering and sending notifications depending on the country of each competing team.
+                            </p>
+                        </div>
+                        <div class="story-dot"></div>
+                        <div class="story-img">
+                            <img src="img/projects/project2/9.png" alt="Google Apps Script routing execution">
+                        </div>
+                    </div>
 
                 </div>
+                <!-- End Timeline -->
+
             </div>
         </section>
-        <!--================End Projects Area =================-->
+        <!--================End Project Detail Area =================-->
 
         <!--================Footer Area =================-->
         <footer class="footer_area p_120">

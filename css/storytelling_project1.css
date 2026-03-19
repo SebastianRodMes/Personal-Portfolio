@@ -1,0 +1,183 @@
+    /* ── Storytelling Timeline ── */
+            .story-timeline {
+                position: relative;
+                padding: 40px 0;
+            }
+            .story-timeline::before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                top: 0;
+                bottom: 0;
+                width: 3px;
+                background: linear-gradient(to bottom, #8490ff, #62bdfc);
+                transform: translateX(-50%);
+            }
+            .story-step {
+                display: flex;
+                align-items: flex-start;
+                margin-bottom: 80px;
+                position: relative;
+            }
+            .story-step:last-child {
+                margin-bottom: 0;
+            }
+            .story-step .story-content {
+                width: 45%;
+                padding: 30px;
+                background: #fff;
+                border-radius: 8px;
+                box-shadow: 0 4px 25px rgba(0,0,0,0.06);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+            .story-step .story-content:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 8px 35px rgba(0,0,0,0.1);
+            }
+            .story-step .story-img {
+                width: 45%;
+            }
+            .story-step .story-img img {
+                width: 100%;
+                border-radius: 8px;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+                cursor: pointer;
+                transition: transform 0.3s ease;
+            }
+            .story-step .story-img img:hover {
+                transform: scale(1.02);
+            }
+            /* Dot on timeline */
+            .story-dot {
+                position: absolute;
+                left: 50%;
+                top: 30px;
+                width: 18px;
+                height: 18px;
+                background: #8490ff;
+                border: 3px solid #fff;
+                border-radius: 50%;
+                transform: translateX(-50%);
+                box-shadow: 0 0 0 4px rgba(132,144,255,0.25);
+                z-index: 2;
+            }
+            /* Step number badge */
+            .step-number {
+                display: inline-block;
+                width: 32px;
+                height: 32px;
+                line-height: 32px;
+                text-align: center;
+                background: linear-gradient(135deg, #8490ff, #62bdfc);
+                color: #fff;
+                border-radius: 50%;
+                font-weight: 700;
+                font-size: 14px;
+                margin-bottom: 12px;
+            }
+            /* Left-aligned step */
+            .story-step.step-left .story-content {
+                margin-right: auto;
+            }
+            .story-step.step-left .story-img {
+                margin-left: auto;
+                padding-left: 60px;
+            }
+            /* Right-aligned step */
+            .story-step.step-right {
+                flex-direction: row-reverse;
+            }
+            .story-step.step-right .story-content {
+                margin-left: auto;
+            }
+            .story-step.step-right .story-img {
+                margin-right: auto;
+                padding-right: 60px;
+            }
+            .story-content h4 {
+                font-size: 20px;
+                font-weight: 700;
+                color: #222;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+            }
+            .story-content p {
+                font-size: 14px;
+                line-height: 1.8;
+                color: #777;
+                margin-bottom: 0;
+            }
+            /* Tools badges */
+            .tool-badge {
+                display: inline-block;
+                padding: 4px 14px;
+                background: #f0f1ff;
+                color: #8490ff;
+                border-radius: 20px;
+                font-size: 12px;
+                font-weight: 600;
+                margin: 4px 4px 4px 0;
+            }
+            /* Project header */
+            .project-header {
+                text-align: center;
+                margin-bottom: 60px;
+            }
+            .project-header h2 {
+                font-size: 36px;
+                font-weight: 700;
+                color: #222;
+                margin-bottom: 15px;
+            }
+            .project-header .project-meta {
+                font-size: 14px;
+                color: #777;
+                margin-bottom: 20px;
+            }
+            .project-header .project-meta span {
+                margin: 0 10px;
+            }
+            .project-header .project-summary {
+                max-width: 700px;
+                margin: 0 auto;
+                font-size: 15px;
+                line-height: 1.8;
+                color: #555;
+            }
+            /* Back link */
+            .back-link {
+                display: inline-flex;
+                align-items: center;
+                font-size: 14px;
+                color: #8490ff;
+                margin-bottom: 40px;
+                transition: color 0.2s;
+            }
+            .back-link:hover {
+                color: #62bdfc;
+                text-decoration: none;
+            }
+            .back-link i {
+                margin-right: 8px;
+            }
+            /* Responsive */
+            @media (max-width: 991px) {
+                .story-timeline::before {
+                    left: 20px;
+                }
+                .story-step {
+                    flex-direction: column !important;
+                }
+                .story-step .story-content,
+                .story-step .story-img {
+                    width: 100%;
+                    padding-left: 50px !important;
+                    padding-right: 0 !important;
+                }
+                .story-dot {
+                    left: 20px;
+                }
+                .story-step .story-img {
+                    margin-top: 20px;
+                }
+            }

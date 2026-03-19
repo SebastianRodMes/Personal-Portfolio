@@ -3097,6 +3097,11 @@ h6 {
   background: #8490ff;
   color: #fff; }
 
+/* ===== Custom: Project card image ===== */
+.projects_item img {
+  width: 100%;
+  display: block; }
+
 /* ===== Custom: Project card placeholder state ===== */
 .projects_item .placeholder_img {
   background: #f5f5f8;
