@@ -1,49 +1,6 @@
-/*----------------------------------------------------
-@File: Default Styles
-@Author: Rocky Ahmed
-@URL: http://wethemez.com
-Author E-mail: rockybd1995@gmail.com
 
-This file contains the styling for the actual theme, this
-is the file you need to edit to change the look of the
-theme.
----------------------------------------------------- */
-/*=====================================================================
-@Template Name: HostHub Construction 
-@Author: Rocky Ahmed
-@Developed By: Rocky Ahmed
-@Developer URL: http://rocky.wethemez.com
-Author E-mail: rockybd1995@gmail.com
-
-@Default Styles
-
-Table of Content:
-01/ Variables
-02/ predefin
-03/ header
-04/ button
-05/ banner
-06/ breadcrumb
-07/ about
-08/ team
-09/ project 
-10/ price 
-11/ team 
-12/ blog 
-13/ video  
-14/ features  
-15/ career  
-16/ contact 
-17/ footer
-
-=====================================================================*/
-/*----------------------------------------------------*/
-/*font Variables*/
-/*Color Variables*/
-/*=================== fonts ====================*/
 @import url("https://fonts.googleapis.com/css?family=Heebo:300,400,500,700|Roboto:300,400,500,700");
-/*---------------------------------------------------- */
-/*----------------------------------------------------*/
+
 .list {
   list-style: none;
   margin: 0px;
@@ -3083,5 +3040,125 @@ h6 {
 /* End Footer Area css
 ============================================================================================ */
 /*---------------------------------------------------- */
+
+/* ===== Custom: Skills — clean bullet list ===== */
+.skill_main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 32px;
+  margin-top: 10px; }
+
+.skill_category h5 {
+  color: #8490ff;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-family: 'Roboto', sans-serif; }
+
+.skill_list {
+  list-style: none;
+  padding: 0;
+  margin: 0; }
+
+.skill_list li {
+  color: #777777;
+  font-size: 14px;
+  padding: 3px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px; }
+
+.skill_list li::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #8490ff;
+  flex-shrink: 0; }
+
+/* ===== Custom: Language Toggle Button ===== */
+.lang-toggle {
+  background: transparent;
+  border: 1.5px solid #8490ff;
+  color: #8490ff;
+  border-radius: 4px;
+  padding: 3px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 200ms ease;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6; }
+
+.lang-toggle:hover {
+  background: #8490ff;
+  color: #fff; }
+
+/* ===== Custom: Project card placeholder state ===== */
+.projects_item .placeholder_img {
+  background: #f5f5f8;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px; }
+
+.projects_item .placeholder_img span {
+  color: #c0c0c8;
+  font-size: 13px;
+  font-family: 'Roboto', sans-serif; }
+
+/* ===== Custom: Experience timeline ===== */
+.experience_area {
+  padding: 80px 0; }
+
+.exp_item {
+  border-left: 3px solid #8490ff;
+  padding: 0 0 40px 30px;
+  position: relative; }
+
+.exp_item:last-child {
+  padding-bottom: 0; }
+
+.exp_item::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #8490ff;
+  position: absolute;
+  left: -7.5px;
+  top: 6px; }
+
+.exp_item h4 {
+  color: #222222;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 4px; }
+
+.exp_item .exp_company {
+  color: #8490ff;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 4px; }
+
+.exp_item .exp_period {
+  color: #aaa;
+  font-size: 13px;
+  margin-bottom: 12px; }
+
+.exp_item p {
+  color: #777;
+  font-size: 14px;
+  line-height: 1.8; }
+
+/* ===== GSAP initial state — elements animate in ===== */
+.gsap-fade-up {
+  opacity: 0;
+  transform: translateY(30px); }
+
 
 /*# sourceMappingURL=style.css.map */
